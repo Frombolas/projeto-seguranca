@@ -27,8 +27,8 @@ with open("dados_extraidos.txt", "w") as f:
 #JavaScript
 js_code = f"""
 app.alert({{
-  cTitle: "Simulação de Segurança",
-  cMsg: "⚠️ SIMULAÇÃO EDUCACIONAL\\n\\n"
+  cTitle: "Simulacao de Seguranca",
+  cMsg: "⚠️ SIMULACAO EDUCACIONAL\\n\\n"
        + "Este PDF esta simulando a coleta de dados.\\n\\n"
        + "Usuario do sistema: {user}\\n"
        + "IP local: {local_ip}\\n\\n",
