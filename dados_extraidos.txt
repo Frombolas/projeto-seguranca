@@ -1,0 +1,27 @@
+
+DADOS EXTRAÍDOS (SIMULAÇÃO EDUCACIONAL)
+
+=== USUÁRIO ===
+
+Usuário logado: ron01
+Password: ron01
+Diretório HOME: /home/ron01
+
+
+=== DISPOSITIVO ===
+Nome do dispositivo: omarchy
+Hostname: omarchy
+IP local principal: 192.168.0.21
+
+=== SISTEMA ===
+Sistema operacional: Linux 6.17.9-arch1-1
+Arquitetura: 64bit
+Processador: 
+
+=== INTERFACES DE REDE ===
+lo → IPv4: 127.0.0.1
+wlan0 → IPv4: 192.168.0.21
+docker0 → IPv4: 172.17.0.1
+
+=== DATA / HORA ===
+2025-12-16 11:28:43
