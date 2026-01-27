@@ -1,0 +1,28 @@
+
+DADOS EXTRAÍDOS (SIMULAÇÃO EDUCACIONAL)
+
+=== USUÁRIO ===
+
+Usuário logado: gugalps
+Diretório HOME: C:\Users\gugalps
+
+
+=== DISPOSITIVO ===
+Nome do dispositivo: DESKTOP-5V123FL
+Hostname: DESKTOP-5V123FL
+IP local principal: 26.249.92.228
+
+=== SISTEMA ===
+Sistema operacional: Windows 11
+Arquitetura: 64bit
+Processador: Intel64 Family 6 Model 165 Stepping 3, GenuineIntel
+
+=== INTERFACES DE REDE ===
+Radmin VPN → IPv4: 26.249.92.228
+Ethernet → IPv4: 192.168.2.2
+Ethernet 2 → IPv4: 192.168.56.1
+vEthernet (Default Switch) → IPv4: 172.21.176.1
+Loopback Pseudo-Interface 1 → IPv4: 127.0.0.1
+
+=== DATA / HORA ===
+2026-01-26 23:13:03

@@ -2,6 +2,10 @@ from pypdf import PdfReader, PdfWriter
 from pypdf.generic import DictionaryObject, NameObject, TextStringObject
 import os
 import socket
+import platform
+from datetime import datetime
+import psutil
+import getpass
 
 try:
     user = os.getlogin()
@@ -14,14 +18,63 @@ try:
 except:
     local_ip = "Não identificado"
 
-# Simulação de dados extraídos
-data_extracted = f"""
-Dados extraídos (simulacao):
-Usuario do sistema: {user}
-IP local: {local_ip}
+
+system = platform.system()
+system_release = platform.release()
+architecture = platform.architecture()[0]
+processor = platform.processor()
+device_name = platform.node()
+home_dir = os.path.expanduser("~")
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+# =============================
+# Interfaces de Rede
+# =============================
+
+network_interfaces_info = []
+
+interfaces = psutil.net_if_addrs()
+for interface_name, addresses in interfaces.items():
+    for addr in addresses:
+        if addr.family == socket.AF_INET:
+            network_interfaces_info.append(
+                f"{interface_name} → IPv4: {addr.address}"
+            )
+
+if not network_interfaces_info:
+    network_interfaces_info.append("Nenhuma interface IPv4 identificada")
+    
+user_info = f"""
+Usuário logado: {user}
+Diretório HOME: {home_dir}
 """
 
-with open("dados_extraidos.txt", "w") as f:
+
+# Simulação de dados extraídos
+data_extracted = f"""
+DADOS EXTRAÍDOS (SIMULAÇÃO EDUCACIONAL)
+
+=== USUÁRIO ===
+{user_info}
+
+=== DISPOSITIVO ===
+Nome do dispositivo: {device_name}
+Hostname: {hostname}
+IP local principal: {local_ip}
+
+=== SISTEMA ===
+Sistema operacional: {system} {system_release}
+Arquitetura: {architecture}
+Processador: {processor}
+
+=== INTERFACES DE REDE ===
+""" + "\n".join(network_interfaces_info) + f"""
+
+=== DATA / HORA ===
+{timestamp}
+"""
+
+with open("dados_extraidos.txt", "w", encoding="utf-8") as f:
     f.write(data_extracted)
 
 #JavaScript
